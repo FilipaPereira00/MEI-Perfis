@@ -1,0 +1,60 @@
+CREATE TABLE Sensor (
+  "id_sensor" INTEGER NOT NULL ENABLE,
+  "num_sensor" INTEGER NOT NULL ENABLE,
+  "type" VARCHAR2(200 byte) NOT NULL ENABLE,
+  CONSTRAINT "SENSOR_PK" PRIMARY KEY ("id_sensor")
+);
+
+
+CREATE TABLE Pacient (
+  "id_pacient" INTEGER NOT NULL ENABLE,
+  "name" VARCHAR2(200 byte) NOT NULL ENABLE,
+  "birthdate" DATE NOT NULL ENABLE,
+  "age" INTEGER NOT NULL ENABLE,
+  CONSTRAINT "PACIENT_PK" PRIMARY KEY ("id_pacient")
+);
+
+CREATE TABLE STATE (
+     "id_state" INTEGER NOT NULL ENABLE,
+     "id_sensor" INTEGER NOT NULL ENABLE,
+     "id_pacient" INTEGER NOT NULL ENABLE,
+     "body_temp" FLOAT NOT NULL ENABLE,
+     "systolic" FLOAT NOT NULL ENABLE,
+     "diastolic" FLOAT NOT NULL ENABLE,
+     "bpm" INTEGER NOT NULL ENABLE,
+     "sato2" INTEGER NOT NULL ENABLE,
+     "timetamp" TIMESTAMP NOT NULL ENABLE,
+    CONSTRAINT "STATE_PK" PRIMARY KEY ("id_state"),
+    CONSTRAINT "SENSOR_FK" FOREIGN KEY ("id_sensor")
+        REFERENCES SENSOR ("id_sensor") ENABLE,
+    CONSTRAINT "PACIENT_FK" FOREIGN KEY ("id_pacient")
+        REFERENCES PACIENT ("id_pacient") ENABLE
+);
+
+
+
+CREATE TABLE Doctor (
+  "id_doctor" INTEGER NOT NULL ENABLE,
+  "name" VARCHAR2(200 byte) NOT NULL ENABLE,
+  CONSTRAINT "DOCTOR_PK" PRIMARY KEY ("id_doctor")
+);
+
+CREATE TABLE Service (
+  "bed" INTEGER NOT NULL ENABLE,
+  "id_pacient" INTEGER NOT NULL ENABLE,
+  "description" VARCHAR2(200 byte) NOT NULL ENABLE,
+  "admission_date" DATE NOT NULL ENABLE,
+  CONSTRAINT "SERVICE_PK" PRIMARY KEY ("bed"),
+  CONSTRAINT "PACIENT_FK_1" FOREIGN KEY ("id_pacient")
+        REFERENCES PACIENT ("id_pacient") ENABLE
+);
+
+
+CREATE TABLE Service_doctor (
+
+);
+
+
+
+
+

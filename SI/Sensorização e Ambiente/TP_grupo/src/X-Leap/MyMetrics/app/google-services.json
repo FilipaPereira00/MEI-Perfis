@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "219492920402",
+    "project_id": "mymetrics-893b8",
+    "storage_bucket": "mymetrics-893b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219492920402:android:ef7e38a5f47e695c0d838b",
+        "android_client_info": {
+          "package_name": "com.example.mymetrics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219492920402-fb7daj0t6g2fj5omon2v9eac8rittg0h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6IAw_txG5Fy1quhb7aE2d3H7iovvSrvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219492920402-fb7daj0t6g2fj5omon2v9eac8rittg0h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
